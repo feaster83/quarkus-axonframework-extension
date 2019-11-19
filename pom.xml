@@ -15,7 +15,7 @@
     <properties>
         <quarkus.version>1.0.0</quarkus.version>
         <axon.version>4.1.1</axon.version>
-        <jackson.version>2.9.9</jackson.version>
+        <version>2.9.10.1</version>
     </properties>
 
     <scm>
