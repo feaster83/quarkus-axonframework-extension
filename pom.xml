@@ -2,21 +2,32 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>quarkus-axon-parent</artifactId>
-        <groupId>io.quarkus</groupId>
-        <version>999-SNAPSHOT</version>
-        <relativePath>../</relativePath>
-    </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>quarkus-axon</artifactId>
-    <name>Quarkus - Axon - Runtime</name>
+    <groupId>feaster83</groupId>
+    <artifactId>quarkus-axonframework-extension</artifactId>
+    <name>Quarkus Axon Framework Extension</name>
+
+    <packaging>pom</packaging>
 
     <properties>
+        <quarkus.version>1.0.0</quarkus.version>
         <axon.version>4.1.1</axon.version>
         <jackson.version>2.9.9</jackson.version>
     </properties>
+
+    <scm>
+        <connection>scm:git:https://github.com/feaster83/quarkus-axonframework-extension.git</connection>
+        <developerConnection>scm:git:https://github.com/feaster83/quarkus-axonframework-extension.git</developerConnection>
+        <url>https://github.com/feaster83/quarkus-axonframework-extension</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/feaster83/quarkus-axonframework-extension/issues</url>
+    </issueManagement>
 
     <dependencies>
         <dependency>
@@ -111,7 +122,7 @@
                         <path>
                             <groupId>io.quarkus</groupId>
                             <artifactId>quarkus-extension-processor</artifactId>
-                            <version>${project.version}</version>
+                            <version>${quarkus.version}</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
