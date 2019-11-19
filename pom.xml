@@ -8,6 +8,7 @@
     <groupId>feaster83</groupId>
     <artifactId>quarkus-axonframework-extension</artifactId>
     <name>Quarkus Axon Framework Extension</name>
+    <version>0.0.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
