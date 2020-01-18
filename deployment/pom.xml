@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>feaster83</groupId>
+        <artifactId>quarkus-axonframework-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>quarkus-axonframework-deployment</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <properties>
+        <axon.version>4.1.1</axon.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-core-deployment</artifactId>
+            <version>${quarkus.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-arc-deployment</artifactId>
+            <version>${quarkus.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.axonframework</groupId>
+            <artifactId>axon-configuration</artifactId>
+            <version>${axon.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.axonframework</groupId>
+            <artifactId>axon-server-connector</artifactId>
+            <version>${axon.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.axonframework</groupId>
+            <artifactId>axon-eventsourcing</artifactId>
+            <version>${axon.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.axonframework</groupId>
+            <artifactId>axon-modelling</artifactId>
+            <version>${axon.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.axonframework</groupId>
+            <artifactId>axon-messaging</artifactId>
+            <version>${axon.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>quarkus-axonframework-runtime</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- TEST SCOPE ONLY DEPENDENCIES -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.5.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-junit5</artifactId>
+            <version>${quarkus.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus.arc</groupId>
+            <artifactId>arc</artifactId>
+            <version>${quarkus.version}</version>
+        </dependency>
+
+        <!-- this should be removed. Fix test according new? format -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-junit5-internal</artifactId>
+            <version>${quarkus.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>io.quarkus</groupId>
+                            <artifactId>quarkus-extension-processor</artifactId>
+                            <version>${quarkus.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+</project>
