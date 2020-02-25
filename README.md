@@ -12,7 +12,6 @@ The integration tests pass and the interfacing with Axon Server is successful
 
 Todos:
 - Code cleanup
-- Solve issue with integration tests that they can't be enabled (Axon server can't run in embedded mode)
-- Maybe add some more unit tests
+- Add some more unit tests
 - Connect with Quarkus build process to include it in the release (requires PR)
 - Test with GraalVM
